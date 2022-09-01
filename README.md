@@ -1,2 +1,2 @@
-# PythonChallanges
+# PythonChallenges
 JAbela
