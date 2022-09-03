@@ -1,11 +1,11 @@
 gerdq = input("What is the string")
 
-fersa = gerdq.count("a")
-fsarg = gerdq.count("e")
-fhrsa = gerdq.count("i")
-fplra = gerdq.count("o")
-ferba = gerdq.count("u")
-webg = ferba + fersa + fhrsa + fplra + fsarg
+vowela = gerdq.count("a")
+vowele = gerdq.count("e")
+voweli = gerdq.count("i")
+vowelo = gerdq.count("o")
+vowelu = gerdq.count("u")
+webg = vowela + vowele + voweli + vowelo + vowelu
 
 rsnk = gerdq.count("ab")
 rtdj = gerdq.count("cd")
