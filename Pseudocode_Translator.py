@@ -27,7 +27,6 @@ def endinsert(line,endstatement):
   pythoncode.insert(currentline,z)
 
 
-
 PythonFile = open(gygygy)
 for line in PythonFile:
    line = line.strip('\n')
