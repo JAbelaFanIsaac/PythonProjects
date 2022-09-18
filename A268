@@ -1,1 +1,35 @@
-print("File signifies a completion of the quiz")
+#File signifies a completion of the quiz
+animals = {'a': 'aardvark', 'b': 'baboon', 'c': 'coati'}
+animals['d'] = 'donkey'
+
+#animals
+#return {'a': 'aardvark', 'b': 'baboon', 'c': 'coati', 'd': 'donkey'}
+
+#len(animals) == 4
+#return True
+
+#'b' in animals
+#return True
+
+#'donkey' in animals
+#return error
+
+#animals['a'] = 'anteater'
+#animals['a']
+#return 'anteater'
+
+#'donkey' in animals.values()
+#return True
+
+#len(animals['a'])
+#return 8
+
+#animals.keys()
+#return dict_keys(['a', 'b', 'c', 'd'])
+
+#del animals['b']
+#len(animals)
+#return 3
+
+#animals.values()
+#return dict_values(['anteater', 'coati', 'donkey'])
