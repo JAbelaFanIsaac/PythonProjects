@@ -1,0 +1,10 @@
+import math
+radius = float(input("radius"))
+def areacircle(n):
+    area = math.pi*n**2
+    return area
+def circumfrence(n):
+    boundary = 2*math.pi*n
+    return boundary
+print("Area of", areacircle(radius))
+print("Circumfrence of", circumfrence(radius))
