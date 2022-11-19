@@ -1,7 +1,7 @@
 def Roman(number):
-	num = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000]
-	sym = ["I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M"]
-	i = 12
+	num = [1, 4, 5, 9, 10, 40, 50, 90, 100, 400, 500, 900, 1000, 4000]
+	sym = ["I", "IV", "V", "IX", "X", "XL", "L", "XC", "C", "CD", "D", "CM", "M", "|IV|"]
+	i = 13
 
 	while number:
 		div = number // num[i]
@@ -12,7 +12,7 @@ def Roman(number):
 		i -= 1
 
 if __name__ == "__main__":
-	number = int(input("Any value below 3550 "))
+	number = int(input("Any value below 4000"))
 
 	print("Roman value is:", end = " ")
 
