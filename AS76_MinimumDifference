@@ -1,0 +1,23 @@
+Myarray = [1, 190, 2701, 37272, 162891, 162, 1967]
+length = len(Myarray)
+Swaps = False
+while 0 < 1:
+    Swaps = False
+    for i in range(length-1):
+        if Myarray[i] > Myarray[i+1]:
+            Temp = Myarray[i]
+            Myarray[i] = Myarray[i+1]
+            Myarray[i+1] = Temp
+        Swaps = True
+    if Swaps == False:
+        break
+    length = length - 1
+print(Myarray)
+
+n = len(Myarray)
+benchmark = 1000000000000
+for j in range(n-1):
+    value = Myarray[j+1]-Myarray[j]
+    if value < benchmark:
+        benchmark = value
+print(benchmark)
