@@ -1,0 +1,7 @@
+with open("C:/Users/201036/PycharmProjects/Y12/venv/Scripts/counter", "r") as reader:
+    depth = len(reader.readlines())
+
+with open("C:/Users/201036/PycharmProjects/Y12/venv/Scripts/counter", "a") as new_file:
+    for i in range((depth+1), (depth + 11)):
+        line_to_write = str(i)+"\n"
+        new_file.write(line_to_write)
