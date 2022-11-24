@@ -1,0 +1,4 @@
+with open("C:/Users/201036/PycharmProjects/Y12/venv/Scripts/counter","w") as new_file:
+    for i in range(10,0,-1):
+        text = str(i)
+        new_file.write(text + "\n")
