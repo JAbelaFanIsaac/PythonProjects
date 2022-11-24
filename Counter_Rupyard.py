@@ -18,6 +18,6 @@ with open("C:/Users/201036/PycharmProjects/Y12/venv/mam.txt", "r") as file2:
 print(second_total)
 
 if first_total > second_total:
-    print("Male>Female")
+    print("Male poem > Female poem")
 if first_total < second_total:
-    print("Female<Male")
+    print("Female poem < Male poem")
