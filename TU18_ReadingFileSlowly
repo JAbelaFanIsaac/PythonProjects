@@ -1,0 +1,10 @@
+import sys
+import time
+def slowprint(s):
+	for c in s + '\n':
+		sys.stdout.write(c)
+		sys.stdout.flush()
+		time.sleep(1./10)
+with open("C:/Users/201036/PycharmProjects/Y12/venv/if.txt", "r") as file1:
+    for i in file1:
+        slowprint(i)
