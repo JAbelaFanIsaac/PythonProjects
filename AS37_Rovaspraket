@@ -1,0 +1,20 @@
+oldstring = input("Sentence ")
+Volews = ['a', 'e', 'i', 'o', 'u']
+i = 0
+Repeater = len(oldstring)
+NewString = ''
+for i in range(Repeater):
+    Flag = False
+    Buffer = ""
+    j = 0
+    ThisChar = oldstring[i]
+    for j in range(5):
+        if ThisChar == Volews[j]:
+            Flag = True
+    if Flag == False:
+        Buffer = ThisChar + "o" + ThisChar
+    if Flag == True:
+        Buffer = ThisChar
+    NewString = NewString + Buffer
+    
+print(NewString)
