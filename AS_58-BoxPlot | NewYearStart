@@ -1,0 +1,77 @@
+# Hello future university! This is the first project I have made in the year 2023.
+# I had a long hiatus in preparation for my school mocks. Sorry for the lack of consistant uploads.
+# The project below is suppose to create a boxplot using the turtle function.
+
+import turtle
+
+# Asking User
+
+Minimum = int(input("Minimum "))
+Q1 = int(input("Lower Quartile "))
+Q2 = int(input("Median "))
+Q3 = int(input("Upper Quartile "))
+Maximum = int(input("Maximum "))
+
+# Make scale
+count = 0
+
+turtle.up()
+turtle.goto(-500, -200)
+turtle.down()
+
+for i in range(11):
+    turtle.write(count)
+    turtle.fd(100)
+    count = count + 10
+
+
+# Vertical Lines
+turtle.up()
+turtle.goto(-500 + 10*Minimum, -100)
+turtle.down()
+turtle.left(90)
+turtle.fd(150)
+
+turtle.up()
+turtle.goto(-500 + 10*Q1, -100)
+turtle.down()
+turtle.fd(150)
+
+turtle.up()
+turtle.goto(-500 + 10*Q2, -100)
+turtle.down()
+turtle.fd(150)
+
+turtle.up()
+turtle.goto(-500 + 10*Q3, -100)
+turtle.down()
+turtle.fd(150)
+
+turtle.up()
+turtle.goto(-500 + 10*Maximum, -100)
+turtle.down()
+turtle.fd(150)
+
+# Horizontal lines
+turtle.right(90)
+
+turtle.up()
+turtle.goto(-500 + 10*Minimum, -25)
+turtle.down()
+turtle.fd((Q1-Minimum)*10)
+
+turtle.up()
+turtle.goto(-500 + 10*Q3, -25)
+turtle.down()
+turtle.fd((Maximum-Q3)*10)
+
+turtle.up()
+turtle.goto(-500 + 10*Q1, -100)
+turtle.down()
+turtle.fd((Q3-Q1)*10)
+turtle.up()
+turtle.goto(-500 + 10*Q1, 50)
+turtle.down()
+turtle.fd((Q3-Q1)*10)
+
+turtle.hideturtle()
