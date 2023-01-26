@@ -1,0 +1,25 @@
+#GuessFinder A246
+#Best solution is to split the terms as evenly as possible
+#In other words, choosing the halfway point
+#Using this strategy, maximum attempts needed is 7
+
+import random
+count = 0
+Target = random.randint(1, 111)
+print("Aim is", Target)
+Win = False
+First = 1
+Last = 111
+
+while Win == False:
+    count = count + 1
+    Midpoint = (First + Last)/2
+    Checkpoint = int(Midpoint)
+    if Checkpoint == Target:
+        Win = True
+    if Checkpoint < Target:
+        First = Checkpoint + 1
+    if Checkpoint > Target:
+        Last = Checkpoint - 1
+
+print("Attempts =", count)
