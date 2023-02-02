@@ -1,0 +1,70 @@
+def LEFT(string,length):
+    # returns the left most characters of a string.
+    # I've done this one as an example.
+    return string[0:length]
+
+def RIGHT(string,length):
+    # Returns the right most characters of a string
+    total_length = len(string)
+    return string[total_length - length: total_length]
+
+def MID (string,start,end):
+    # Returns string from position x, length y. Note that the count starts at 1.
+    return string[start-1: start + end-1]
+
+def LENGTH (string):
+    #Returns the lengths of a string
+    total_length = len(string)
+    return total_length
+
+def LCASE (string):
+# From here on in you need to figure out the parameters and the function.
+    total_length = len(string)
+    small = string.lower()
+    if total_length == 1:
+        return small
+    else:
+        return "not char"
+
+def UCASE(string):
+  #Returns the upper case character. (Does nothing if already upper case). Note that this works on characters rather than a string.
+    total_length = len(string)
+    capital = string.capitalize()
+    if total_length == 1:
+        return capital
+    else:
+        return "not char"
+
+def TO_UPPER(string):
+  #Returns a string in upper case. (Non-alphabetic characters and upper case characters remain unchanged)
+    capital = string.upper()
+    return capital
+
+def TO_LOWER(string):
+  #Returns a string in lower case. (Non-alphabetic characters and lower case characters remain unchanged)
+    small = string.lower()
+    return small
+
+def NUM_TO_STRING(integer):
+    try:
+        newstring = str(integer)
+        return newstring
+    except:
+        print("Not a number")
+
+def STRING_TO_NUM(string):
+    try:
+        newnum = int(string)
+        return newnum
+    except:
+        print("Not a string")
+
+def INT(real):
+    return int(real)
+
+def ASC(char):
+  #Changes a character into its ASCII number.
+    try:
+        return ord(char)
+    except:
+        print("not string or char")
