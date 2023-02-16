@@ -1,0 +1,65 @@
+Characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+Script = input("Sentence: ")
+Amount = []
+Reference = []
+
+for i in range(26):
+    Bench = Script.count(Characters[i])
+    Amount.append(Bench)
+    Reference.append(Bench)
+
+print(Amount)
+
+#Sorting 
+length = 26
+Swaps = False
+while 0 < 1:
+    Swaps = False
+    for j in range(length-1):
+        if Amount[j] > Amount[j+1]:
+            Temp = Amount[j]
+            Amount[j] = Amount[j+1]
+            Amount[j+1] = Temp
+            Swaps = True
+    if Swaps == False:
+        break
+    length = length - 1
+print(Amount)
+
+print("Most Common Characters")
+for k in range(26):
+    Max1Amo = Amount[25]
+    Max1Got = False
+    Max2Amo = Amount[24]
+    Max2Got = False
+    Max3Amo = Amount[23]
+    if Reference[k] == Max3Amo and Max2Got == True:
+        Max3Pos = k
+        print(Characters[Max3Pos])
+    if Reference[k] == Max2Amo and Max1Got == True:
+        Max2Pos = k
+        Max2Got = True
+        print(Characters[Max2Pos])
+    if Reference[k] == Max1Amo and Max1Got == False:
+        Max1Pos = k
+        Max1Got = True
+        print(Characters[Max1Pos])
+
+print("Least Common Characters")
+for l in range(26):
+    Min1Amo = Amount[0]
+    Min1Got = False
+    Min2Amo = Amount[1]
+    Min2Got = False
+    Min3Amo = Amount[2]
+    if Reference[l] == Min3Amo and Min2Got == True:
+        Min3Pos = l
+        print(Characters[Min3Pos])
+    if Reference[l] == Min2Amo and Min1Got == True:
+        Min2Pos = l
+        Min2Got = True
+        print(Characters[Min2Pos])
+    if Reference[l] == Min1Amo and Min1Got == False:
+        Min1Pos = l
+        Min1Got = True
+        print(Characters[Min1Pos])
