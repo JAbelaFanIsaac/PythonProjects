@@ -2,7 +2,7 @@ monsterdict = {}
 realname = False
 
 def store():
-    with open("filetomain.txt", "r") as file:
+    with open("Monstername.txt", "r") as file:
         lines = file.readlines()
         for line in lines:
             name, description = line.rstrip().rsplit(",")
