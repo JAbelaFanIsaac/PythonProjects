@@ -31,6 +31,8 @@ print(category)
 
 def fight():
     j = random.randint(1,895)
+    while j == 4:
+        j = random.randint(1,895)
     i = str(j)
     print("Computer Picks", monster_display_comp[i])
     print("Computer Category Value is "+ monster_fight_stats_comp[i][category])
