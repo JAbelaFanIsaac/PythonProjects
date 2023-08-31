@@ -1,0 +1,11 @@
+Data = [1, 9, 7, 3, 11, 10, 5, 2, 6]
+
+def push(value):
+    Data.append(value)
+
+def pop():
+    if len(Data) == 0:
+        print("No elements in stack")
+    else:
+        print(Data[len(Data)-1])
+        Data.remove(Data[len(Data)-1])
