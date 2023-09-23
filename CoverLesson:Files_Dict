@@ -1,0 +1,77 @@
+#Load Data into some arrays
+Q_List = {}
+A_List = {}
+Sorted_QList = []
+Sorted_AList = []
+Student_DisplayQ = []
+Student_HiddenA = []
+
+def Loading():
+    with open("Questions.txt", "r") as file1: #Just use temporary
+        for line in file1: #Line is a variable for for loop
+            row = line.split(",")
+            row[3] = row[3].strip()
+            Q_List[row[0]] = [row[1], row[2], row[3]]
+    with open("Answers.txt", "r") as file2:
+        for items in file2:
+            Num, Ques, Ans = items.split(",")
+            Ans = Ans.strip()
+            A_List[Num] = Ques, Ans
+
+Loading()
+#Generate data to sort
+def PlacingNum():
+    for keys in Q_List:
+        Sorted_QList.append(int(keys))
+
+    for keys in A_List:
+        Sorted_AList.append(int(keys))
+
+PlacingNum()
+
+def SortingNum():
+    Swaps = True
+    Boundary = len(Sorted_QList)-1
+    while Swaps == True:
+        Swaps = False
+        for i in range(Boundary):
+            if Sorted_QList[i] > Sorted_QList[i+1]:
+                temp = Sorted_QList[i]
+                Sorted_QList[i] = Sorted_QList[i+1]
+                Sorted_QList[i+1] = temp
+                Swaps = True
+        Boundary = Boundary - 1
+
+    Swaps = True
+    Boundary = len(Sorted_AList) - 1
+    while Swaps == True:
+        Swaps = False
+        for i in range(Boundary):
+            if Sorted_AList[i] > Sorted_AList[i + 1]:
+                temp = Sorted_AList[i]
+                Sorted_AList[i] = Sorted_AList[i + 1]
+                Sorted_AList[i + 1] = temp
+                Swaps = True
+        Boundary = Boundary - 1
+
+SortingNum()
+#Create exercises and solutions by students
+def Exercise(n):
+    for i in range(n):
+        Label = Sorted_QList[i]
+        Student_DisplayQ.append(Q_List[str(Label)][2])
+        Student_HiddenA.append(A_List[str(Label)])
+        print(Q_List[str(Label)][2])
+
+Number = int(input("How many Questions do you want to do?"))
+Exercise(Number)
+#Save results to be recalled later
+def GetAnswers():
+    print(Student_HiddenA)
+
+print("Type 1 to get answers")
+while 0 <1:
+    Typing = input("")
+    if Typing == "1":
+        GetAnswers()
+        break
