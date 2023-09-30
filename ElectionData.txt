@@ -1,0 +1,15 @@
+Alice, Bob, Charlie
+Alice, Charlie, Bob
+Bob, Charlie, Alice
+Bob, Alice, Charlie
+Charlie, Alice, Bob
+Alice, Bob, Charlie
+Alice, Charlie, Bob
+Bob, Charlie, Alice
+Bob, Alice, Charlie
+Charlie, Alice, Bob
+Bob, Charlie, Alice
+Alice, Charlie, Bob
+Bob, Charlie, Alice
+Bob, Alice, Charlie
+Charlie, Alice, Bob
