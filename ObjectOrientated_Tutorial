@@ -1,0 +1,106 @@
+#Object orientated is like user defined variables
+#Device will be set up with right IDE and everything
+"""
+Very good at procedural programs
+Containment -
+Getter -
+Setter -
+Attributes - the contents in between the
+Methods -
+Instances -
+Inheretance -
+"""
+import random
+
+class Character:
+    def __init__(self):
+        self.name = ''
+        self.attack = 0
+        self.defense = 0
+        self.health = 0
+        self.experience = 0
+
+    def print_basics(self):
+        print("Name: ", self.name)
+        print("Attack: ",self.attack)
+        print("Defense: ", self.defense)
+        print("Health: ", self.health)
+        print("Experience: ", self.experience)
+
+    def print_me(self):
+        self.print_basics()
+
+    def print_intro(self):
+        print("This is an exciting story")
+
+class wizard(Character):
+    def __init__(self):
+        Character.__init__(self)
+        self.magic = 0
+
+    def print_me(self):
+        self.print_basics()
+        print("Magic: ", self.magic)
+
+class knight(Character):
+    def __init__(self):
+        Character.__init__(self)
+        self.armour = 0
+
+    def setter(self, name):
+        self.name = name
+        self.attack = random.randint(1,20)
+        self.defense = random.randint(1, 20)
+        self.__health = random.randint(1, 20)
+        self.experience = random.randint(1, 20)
+        self.armour = 30
+
+    def health_getter(self):
+        return self.__health
+
+    def print_me(self):
+        self.print_basics()
+        print("Armour: ", self.armour)
+
+    class weapon:
+        def attack():
+            print("He swings his sword")
+
+
+JAbela = Character()
+
+JAbela.name = "JAbela"
+JAbela.attack = 53
+JAbela.defense = 78
+JAbela.health = 89
+JAbela.experience = 100
+JAbela.print_me()
+
+Kevin = wizard()
+Kevin.name = "Tebay"
+Kevin.attack = 3
+Kevin.defense = 7
+Kevin.health = 8
+Kevin.experience = 10
+Kevin.magic = 34
+Kevin.print_me()
+
+Joe = knight()
+Joe.name = "Mama"
+Joe.attack = 23
+Joe.defense = 57
+Joe.health = 81
+Joe.experience = 4
+Joe.armour = 56
+Joe.print_me()
+
+print(vars(Kevin))
+
+Joe.weapon.attack()
+
+arthur = knight()
+arthur.setter("Arthur")
+arthur.print_me()
+print("Act Health: ",arthur.health_getter())
+
+# Private are the __ functions
