@@ -1,5 +1,4 @@
 import random
-Marking = 19
 
 class Character:
     def __init__(self):
@@ -157,7 +156,7 @@ class knight(Character):
                 print("Natural 1")
                 return -1
 
-class hakari(Character):
+class gamble(Character):
     def __init__(self):
         Character.__init__(self)
 
@@ -179,7 +178,7 @@ class hakari(Character):
         def attack():
             print("Just one more")
             j = random.randint(1, 20)
-            if j > Marking:
+            if j > 19:
                 print("Crit 20")
                 return 90
             elif j >= 1:
@@ -222,7 +221,7 @@ if Class1 == 2:
     Starting1 = wizard()
     Starting1.setter(Name1)
 if Class1 == 3:
-    Starting1 = hakari()
+    Starting1 = gamble()
     Starting1.setter(Name1)
 
 if Class2 == 1:
@@ -232,7 +231,7 @@ if Class2 == 2:
     Starting2 = wizard()
     Starting2.setter(Name2)
 if Class2 == 3:
-    Starting2 = hakari()
+    Starting2 = gamble()
     Starting2.setter(Name2)
 
 print(vars(Starting1))
@@ -240,7 +239,7 @@ print(vars(Starting2))
 i = 1
 
 def fight(person, i):
-    b = input("A, D, H")
+    b = input("A, D, S")
     if b == "A":
         if i % 2 == 0:
             bench = Starting2.weapon.attack()
@@ -255,7 +254,7 @@ def fight(person, i):
         if i % 2 == 1:
             bench = Starting1.weapon.defense()
             Starting1.health = Starting1.health + bench
-    if b == "H":
+    if b == "S":
         if i % 2 == 0:
             bench = Starting2.weapon.special()
             Starting2.health = Starting2.health + bench
@@ -265,7 +264,6 @@ def fight(person, i):
     if b == "XXX":
         print(vars(Starting1))
         print(vars(Starting2))
-        print(Marking)
     i = i + 1
     if Starting1.health <= 0:
         print("Player 2 Wins")
