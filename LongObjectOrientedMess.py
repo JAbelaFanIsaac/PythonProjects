@@ -30,7 +30,7 @@ class wizard(Character):
         self.name = name
         self.attack = random.randint(1,20)
         self.defense = random.randint(1, 20)
-        self.health = random.randint(1, 20)
+        self.health = random.randint(40, 60)
         self.experience = random.randint(1, 20)
         self.__money = random.randint(1,20)
         self.armour = 30
@@ -76,16 +76,16 @@ class wizard(Character):
             j = random.randint(1, 20)
             if j == 20:
                 print("Crit 20")
-                return 5
+                return 10
             elif j > 5:
                 print("Landed a hit")
-                return 1
+                return 5
             elif j > 1:
                 print("Miss")
                 return 0
             if j ==1:
                 print("Natural 1")
-                return -1
+                return -6
 
 
 class knight(Character):
@@ -97,7 +97,7 @@ class knight(Character):
         self.name = name
         self.attack = random.randint(1,20)
         self.defense = random.randint(1, 20)
-        self.health = random.randint(1, 20)
+        self.health = random.randint(70, 90)
         self.experience = random.randint(1, 20)
         self.__money = random.randint(1,20)
         self.armour = 30
@@ -145,16 +145,16 @@ class knight(Character):
             j = random.randint(1, 20)
             if j == 20:
                 print("Crit 20")
-                return 5
+                return 10
             elif j > 5:
                 print("Landed a hit")
-                return 1
+                return 5
             elif j > 1:
                 print("Miss")
                 return 0
             if j == 1:
                 print("Natural 1")
-                return -1
+                return -10
 
 class gamble(Character):
     def __init__(self):
@@ -164,7 +164,7 @@ class gamble(Character):
         self.name = name
         self.attack = random.randint(1,20)
         self.defense = random.randint(1, 20)
-        self.health = random.randint(1, 20)
+        self.health = random.randint(40, 100)
         self.experience = random.randint(1, 20)
         self.__money = random.randint(1,20)
 
@@ -180,7 +180,7 @@ class gamble(Character):
             j = random.randint(1, 20)
             if j > 19:
                 print("Crit 20")
-                return 90
+                return 200
             elif j >= 1:
                 print("Miss")
                 return 0
@@ -210,9 +210,9 @@ class gamble(Character):
                 return -20
 
 Name1 = input("What is your name?")
-Class1 = int(input("Class?"))
+Class1 = int(input("Class? 1/Knight 2/Wizard 3/Gambler"))
 Name2 = input("What is your name?")
-Class2 = int(input("Class?"))
+Class2 = int(input("Class? 1/Knight 2/Wizard 3/Gambler"))
 
 if Class1 == 1:
     Starting1 = knight()
@@ -223,6 +223,8 @@ if Class1 == 2:
 if Class1 == 3:
     Starting1 = gamble()
     Starting1.setter(Name1)
+else:
+    print("kys")
 
 if Class2 == 1:
     Starting2 = knight()
@@ -233,6 +235,8 @@ if Class2 == 2:
 if Class2 == 3:
     Starting2 = gamble()
     Starting2.setter(Name2)
+else:
+    print("kys")
 
 print(vars(Starting1))
 print(vars(Starting2))
