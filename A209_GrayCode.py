@@ -16,4 +16,4 @@ def GCode(n):
         Set.append("1" + str(NewSecond[i]))
     return Set
 
-print(GCode(3))
+print(GCode(4))
