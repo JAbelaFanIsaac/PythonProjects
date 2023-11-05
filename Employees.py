@@ -44,7 +44,7 @@ class employee():
 def Constructor():
     try:
         with open("emailList.txt", "r") as file:
-            for i in range(10):
+            for i in range(9):
                 first = file.readline().strip()
                 second = file.readline().strip()
                 arrayEmployees.append(employee(first, second, str(i+1)))
