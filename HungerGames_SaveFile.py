@@ -64,4 +64,3 @@ with open("Hunger_Characters.txt", "a") as file:
         file.write(List_characters[i].get_name()+ "\n")
         file.write(List_characters[i].get_weapon()+ "\n")
         file.write(List_characters[i].get_special_ability()+ "\n")
-        file.write("\n")
